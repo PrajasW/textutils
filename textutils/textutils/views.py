@@ -2,6 +2,9 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 
+def index(request):
+    return render(request,'home.html')
+
 def analyze(request):
     intext = request.POST.get('text', 'Error in fetching')
     #check checkbox value
@@ -22,7 +25,7 @@ def analyze(request):
                 analyzed = analyzed + char
     #capitlizing all
     if(fullcaps == 'on'):
-        fullcaps.upper()
+        analyzed = analyzed.upper()
     #newline remover
     if(newlineremover == 'on'):
         temp = analyzed

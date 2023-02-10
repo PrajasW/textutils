@@ -34,14 +34,14 @@
 </div>
 
 <div class = 'container' style="margin-top: 30px">
-<form action="analyze" method="POST">
+<form action="analyze" method="post">
   {% csrf_token %}
     <div class="mb-3">
   <label for="exampleFormControlTextarea1" class="form-label">Enter Text</label>
       <textarea class="form-control" id="text" rows="5" name="text" ></textarea>
     </div>
 
-    <div class="form-check form-switch">
+    <div class="form-check form-switch">!
   <input class="form-check-input" type="checkbox" role="switch" id="removepunc" name="removepunc">
   <label class="form-check-label" for="removepunc">Remove Punctuations</label>
 </div>
